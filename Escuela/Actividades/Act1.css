@@ -1,0 +1,50 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+    font-size: small;
+}
+
+.Lorem{
+    font-size: 36px;
+}
+u{
+color: red;
+}
+
+ul{
+    background-color: green;
+}
+
+.pink{
+    color: pink;
+}
+
+.magenta{
+    background-color: mediumslateblue;
+}
+
+.box{
+    background-color: blanchedalmond;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 10px;
+}
+
+.links{
+    margin-left: 500px;
+}
+
+.main{
+   margin-left: 1000px;
+   background-color: red;
+   padding: 20px;
+   padding-top: 0px;
+    
+}
+
+footer{
+    margin-left: 1600px;
+    background-color: orange;
+
+}

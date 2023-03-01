@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Rock+Salt&display=swap');
+
+@font-face {
+    font-family: "PermanentMarker-Regular";
+    src: url(Fonts/PermanentMarker-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.15rem;
+    color: #727;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header{
+    background-image: url(Images/pexels-anni-roenkae-pink.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    padding-bottom: 30px;
+}
+
+.nav ul{
+    margin: 0;
+}
+
+.nav li{
+    display: inline; /*Se acomoden en linea pero no deja ponerle margin y padding top bottom*/
+}
+
+.nav a{
+    display: inline-block; /*con esto si*/
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.main-nav li{
+    padding: 0.5vw;
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.band-name{
+    text-align: center;
+    margin: 0;
+    font-size: 4rem;
+    color: white;
+    font-family: "PermanentMarker-Regular";
+    font-weight: normal;
+}
+
+.band-name-large{
+    font-size: 7em;
+}
+
+.content-section{
+    margin-bottom: 250px;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-header{
+    font-family: "Rock Salt", cursive;
+    color: #414;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.image{
+    float: left;
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 20%;
+}
+
+.main-footer{
+    background-color: #ff4c7b;
+}
+
+.main-footer-container{
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul{
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li{
+    padding: 0 .5em;
+}
+
+.footer-nav img{
+    height: 50px
+}
