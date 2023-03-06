@@ -1,0 +1,79 @@
+
+.main-header{
+    background-image: url(Images/pexels-anni-roenkae-pink.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    padding-bottom: 30px;
+}
+
+.nav ul{
+    margin: 0;
+}
+
+.nav li{
+    display: inline; /*Se acomoden en linea pero no deja ponerle margin y padding top bottom*/
+}
+
+.nav a{
+    display: inline-block; /*con esto si*/
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.main-nav li{
+    padding: 0.5vw;
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.band-name{
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+    color: white;
+    font-family: "PermanentMarker-Regular";
+    font-weight: normal;
+}
+
+.band-name-large{
+    font-size: 7em;
+}
+
+.grid{
+    width: 360px;
+    height: 360px;
+    border: solid black 1px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+
+.grid div{
+    width: 20px;
+    height: 20px;
+}
+
+.player{
+    background-color: red;
+    border-radius: 10%;
+}
+
+.coin{
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    position: absolute;
+    border-radius: 50%;
+}
