@@ -52,22 +52,23 @@
 }
 
 .grid{
-    width: 360px;
-    height: 360px;
+    width: 500px;
+    height: 400px;
     border: solid black 1px;
     display: flex;
     flex-wrap: wrap;
     margin: 10px auto;
 }
 
-.grid div{
-    width: 20px;
-    height: 20px;
-}
 
 .player{
     background-color: red;
     border-radius: 10%;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    bottom: 350px;
+    left: calc(50% - 25px);
 }
 
 .coin{

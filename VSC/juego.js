@@ -1,49 +1,60 @@
-const grid = document.querySelector(".grid");
-const coins = document.querySelector(".coins")
-const ancho = 18;
-let playerIndex = 296;
-let direccion = 1;
+var grid = document.querySelector(".grid");
+var player = document.querySelector(".player");
+var coins = document.querySelector(".coins");
+var playerLeft = parseInt(window.getComputedStyle(player).getPropertyValue("left"));
+var playerbottom = parseInt(window.getComputedStyle(player).getPropertyValue("bottom"));
 
-for (let i = 0; i < 324; i++) {
-    const cuadro = document.createElement('div');
-    grid.appendChild(cuadro)
+function playerMoveLeft(){
+playerLeft -= 15;
+player.style.left = playerLeft + 'px';
+}
+
+function playerMoveRight(){
+    playerLeft += 15;
+    player.style.left = playerLeft + 'px';
+    }
+
+
+function control(e){
+    console.log('control');
+    switch(e.key){
+        case 'ArrowLeft':
+            if(playerLeft > 710) playerMoveLeft();
+            break;
+        case 'ArrowRight':
+            if(playerLeft < 1175) playerMoveRight();
+            break;
+    }
     
 }
 
-const cuadricula = Array.from(document.querySelectorAll('.grid div'));
-
-cuadricula[playerIndex].classList.add('player');
+document.addEventListener("keydown", control);
 
 
-function movePlayer(e){
-    cuadricula[playerIndex].classList.remove('player');
-    switch(e.key){
-        case 'ArrowLeft':
-            if(playerIndex % ancho !== 0) playerIndex -=1;
-            break;
-        case 'ArrowRight':
-            if(playerIndex % ancho < ancho-1) playerIndex +=1;
-            break
-    }
-    cuadricula[playerIndex].classList.add('player');
-}
-
-document.addEventListener('keydown',movePlayer);
 
 function generateCoins(){
     var coinsBottom = 730;
-    var coinleft = Math.floor(Math.random()*800);
+    var coinsleft = Math.floor(Math.random()* 550)+690;
     var coin = document.createElement('div');
     coin.setAttribute("class", "coin");
     coins.appendChild(coin)
     function FallDown(){
+        if (coinsBottom < playerbottom+ 50 && coinsBottom>playerbottom && coinsleft > playerLeft - 30 && coinsleft < playerLeft + 50){
+            coins.removeChild(coin);
+            clearInterval(fallInterval);
+        }
+        if(coinsBottom < playerbottom){
+            console.log("Game Over");
+            clearInterval(fallInterval);
+            clearTimeout(coinsTimeout);
+            coins.removeChild(coin)
+        }
         coinsBottom -= 5;
         coin.style.bottom = coinsBottom + 'px';
-        coin.style.left = coinleft + 'px';
-
+        coin.style.left = coinsleft+'px';
     }
     
-    setInterval(FallDown,20)
-    setTimeout(generateCoins,2000)
+    var fallInterval = setInterval(FallDown,20)
+    var coinsTimeout = setTimeout(generateCoins,2000)
 }
 generateCoins();
