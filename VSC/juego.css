@@ -67,7 +67,7 @@
     width: 30px;
     height: 20px;
     position: absolute;
-    bottom: 350px;
+    bottom: 250px;
     left: calc(50% - 25px);
 }
 
@@ -77,4 +77,20 @@
     background-color: yellow;
     position: absolute;
     border-radius: 50%;
+}
+
+.time{
+    text-align: center;
+}
+
+.score{
+    text-align: center;
+}
+
+.highscore{
+    text-align: center;
+}
+
+.btn{
+    margin-left: 895px;
 }
