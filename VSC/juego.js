@@ -14,6 +14,11 @@ let score = 0
 let seconds = 30
 
 
+start.addEventListener('click', () => {
+    generateCoins()
+    gameStart = true
+})
+
 function playerMoveLeft(){
 playerLeft -= 15;
 player.style.left = playerLeft + 'px';
@@ -26,6 +31,7 @@ function playerMoveRight(){
 
 
 function control(e){
+    if (gameStart){
     console.log('control');
     switch(e.key){
         case 'ArrowLeft':
@@ -34,8 +40,8 @@ function control(e){
         case 'ArrowRight':
             if(playerLeft < 1175) playerMoveRight();
             break;
+        }
     }
-    
 }
 
 document.addEventListener("keydown", control);
@@ -79,15 +85,17 @@ function generateCoins(){
     var coinsTimeout = setTimeout(generateCoins,2000)
 
 }
-generateCoins();
 
 function increaseTime() {
+    if(gameStart){
     let m = Math.floor(seconds / 60)
     let s = seconds % 60
     m = m < 10 ? `0${m}` : m
     s = s < 10 ? `0${s}` : s
     timeEl.innerHTML = `Time: ${m}:${s}`
     seconds--
+    }
 }
+
 var Tiempo = setInterval(increaseTime,1000)
 
