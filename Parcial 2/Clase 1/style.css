@@ -1,0 +1,33 @@
+*{
+    background-color: rgb(38,38,38);}
+ 
+ .padre{
+            background-color: rgb(54, 7, 129);
+            height: 500px;
+            width: 500px;
+            margin: 1vh auto;
+        }
+ 
+
+.hijo{
+    background-color: greenyellow;
+    height: 50%;
+    width: 50%;
+    /* transition: all 1s linear; */
+    animation: izquierda-derecha 1s linear 3s forwards;
+    animation-fill-mode: backwards;
+}
+
+
+        .padre:hover .hijo{
+            /* transform: translateX(100%);
+            background-color: red; */
+            
+        }
+
+        @keyframes izquierda-derecha{
+            100%{
+                transform: translateX(100%);
+                background-color: red;
+            }
+        }

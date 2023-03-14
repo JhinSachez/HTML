@@ -1,0 +1,58 @@
+.parent-div{
+    width: 600px;
+    height: 50vh;
+    margin: 100px auto;
+    border: 5px solid blue;
+}
+
+.T1{
+    animation: Titulo1 1s 1.5s linear both;
+}
+.T2{
+    animation: Titulo1 1s 1.7s linear both;
+}
+.T3{
+    animation: Titulo1 1s 1.9s linear both;
+}
+
+
+.cuadro{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    margin-top: 40%;
+    animation: Rotate 6s infinite both;
+}
+
+.padre-div:hover .rectangulo{
+    background-color: orangered;
+    animation: escala 1s both
+}
+@keyframes Titulo1{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+100%{
+    opacity: 1;
+}
+}
+
+@keyframes Rotate{
+0%{
+transform: translateX(0) rotate(0);
+
+}
+100%{
+transform: translateX(550px) rotate(360deg);
+}
+}
+
+@keyframes escala{
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1)
+    }
+}
