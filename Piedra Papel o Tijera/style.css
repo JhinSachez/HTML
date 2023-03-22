@@ -1,0 +1,43 @@
+
+@media (orientation: landscape) {
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+
+.campo-batalla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+@media (orientation: landscape) {
+.caja{
+    margin: 25px
+    }
+}
+.texto{
+    font-size: 45px;
+}
+
+@media (orientation: landscape) {
+.ataque{
+    width: 200px;
+    border-radius: 50%;
+    margin: 20px;
+    }
+}
+
+@media (orientation: landscape) {
+.ataque:hover{
+    border: 2px solid red;
+    cursor: pointer;
+    margin: 18px;
+}
+}
